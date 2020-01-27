@@ -12,23 +12,21 @@ function App() {
 
   return (
     <div className="App">
-      <div className="content">
-        <div className="image-container">
-          {status === "success" && (
-            <>
-              <AlternateColors
-                phrase="We ❤ our pups!"
-                colors={["#8093FF", "#FF502C", "#FF9472", "#FF91FF"]}
-              />
-              <img className="image" src={dog} />
-            </>
-          )}
-          {status === "loading" && <div className="loader">Loading...</div>}
-        </div>
-        <button onClick={getDog}>get new random dog</button>
-        <ListOfBreeds list={breeds} selectBreed={selectBreed} />
-        <div />
+      <div className="image-container">
+        {status === "success" && (
+          <>
+            <AlternateColors
+              phrase="We ❤ our pups!"
+              colors={["#8093FF", "#FF502C", "#FF9472", "#FF91FF"]}
+            />
+            <img className="image" src={dog} />
+          </>
+        )}
+        {status === "loading" && <div className="loader">Loading...</div>}
       </div>
+      <button onClick={getDog}>get new random dog</button>
+      <ListOfBreeds list={breeds} selectBreed={selectBreed} />
+      <div />
     </div>
   );
 }
